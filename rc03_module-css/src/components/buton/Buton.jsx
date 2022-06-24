@@ -1,9 +1,9 @@
-import "./Buton.css"
+import btnStyle from "./buton.module.css"
 
 const Buton = ({btnName}) => {
   return (
-    <div className="title">
-      <button className="btn-blue">{btnName}</button>
+    <div className={btnStyle["title"]}>
+      <button className={btnStyle["btn-blue"]}>{btnName}</button>
     </div>
   )
 }
