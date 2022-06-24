@@ -12,7 +12,7 @@ const Card = ({ data }) => {
 return(
     <div className={cardStyle["card"]} key={id}>
       <h1>{name}</h1>
-      <h1>{job}</h1>
+      <h2>{job}</h2>
       <p>{comment}</p>
        <img src={img} alt="img" />
       <div className={cardStyle["btn-container"]}>
