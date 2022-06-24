@@ -1,1 +1,14 @@
 
+@import "./variables";
+
+
+header{
+
+background-color: $lightgreen;
+padding: 3rem;
+
+.title{
+    text-align: center;
+    color: azure;
+}
+}
