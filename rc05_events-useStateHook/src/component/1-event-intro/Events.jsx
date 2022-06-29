@@ -21,9 +21,10 @@ const Events = () => {
   const handleClear = (text)=>{
     alert(text);
   }
-  const handleChange =()=>{
+  const handleChange =(e)=>{
     info = "HOOKS";
     console.log(info);
+    console.log(e.target);
 
   }
   return (
@@ -39,7 +40,7 @@ const Events = () => {
 
       <button onClick={()=>handleClear("Btn pressed")} className="btn btn-dark ms-4">Clear</button>
 
-      <button onClick={handleChange} className="btn btn-danger ms-4">Change</button>
+      <button onClick={(e)=>handleChange(e)} className="btn btn-danger ms-4">Change</button>
     </div>
   )
 }
