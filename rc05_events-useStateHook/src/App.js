@@ -1,10 +1,12 @@
 import Events from "./component/1-event-intro/Events";
+import UseStateExample from "./useStateHook/UseStateExample";
 
 function App() {
   return (
     <div>
       <Events/>
-    </div>
+      <UseStateExample/>
+          </div>
   );
 }
 
