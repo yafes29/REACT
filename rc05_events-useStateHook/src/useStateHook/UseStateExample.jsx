@@ -23,17 +23,22 @@ import { useState } from "react";
 const UseStateExample = () => {
 
     const [count, setCount] = useState(0); //Array destruc.
-
+    const inc = ()=>{
+        setCount(count + 1);
+    }
+    const dec = ()=>{
+        setCount(count -1);
+    }
     return <div className="container text-center mt-4">
-        <h1 className="display-4 text-danger m-4">USESTATE COUNT:</h1>
-        <button className="btn btn-success ">
+        <h1 className="display-4 text-danger m-4">USESTATE COUNT:{count}</h1>
+        <button onClick={inc} className="btn btn-success ">
             INC
         </button>
-        <button className="btn btn-dark ms-4">
+        <button onClick={()=>setCount(0)} className="btn btn-dark ms-4">
             CLEAR
         </button>
 
-        <button className="btn btn-warning ms-4">
+        <button onClick={dec} className="btn btn-warning ms-4">
             DEC
         </button>
     </div>
