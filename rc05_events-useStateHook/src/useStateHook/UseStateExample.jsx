@@ -25,9 +25,9 @@ const UseStateExample = () => {
     const [count, setCount] = useState(0); //Array destruc.
     const [info, setInfo] = useState({
 
-        name : "Ahmet Yılmaz",
-        email : "ay@gmail.com",
-        age : 32
+        name: "Ahmet Yılmaz",
+        email: "ay@gmail.com",
+        age: 32
     });
 
 
@@ -38,16 +38,23 @@ const UseStateExample = () => {
         setCount(count - 1);
     }
 
-    const incAge= ()=>{
-        setInfo({...info, age : info.age +1})
+    const incAge = () => {
+        // setInfo(info.age + 1);
+        // console.log(info.age);
+        // setInfo({ name: 'mehmet yilmaz', email: 'my@gmail.com', age: 44 });
+        //? key:Value
+
+        setInfo({ ...info, age: info.age + 1 });
+        setInfo({...info, name: info.name = "Mustafa PALA", email : info.email = "yafes29@hotmail.com"})
+      
 
     }
 
     console.log(info);
     return <div className="container text-center mt-4">
 
-        <section> 
-              <h1 className="display-4 text-danger m-4">USESTATE COUNT:{count}</h1>
+        <section>
+            <h1 className="display-4 text-danger m-4">USESTATE COUNT:{count}</h1>
             <button onClick={inc} className="btn btn-success ">
                 INC
             </button>
@@ -58,16 +65,16 @@ const UseStateExample = () => {
             <button onClick={dec} className="btn btn-warning ms-4">
                 DEC
             </button>
-            
-            </section>
 
-            <section>
+        </section>
+
+        <section>
             <h1 className="display-4 text-danger m-4">USESTATE OBJECT</h1>
             <h2>{info.name}</h2>
             <h3>{info.email}</h3>
             <h4>{info.age}</h4>
             <button onClick={incAge} className="btn btn-info">inc age</button>
-            </section>
+        </section>
 
     </div>
 
