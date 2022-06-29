@@ -37,6 +37,13 @@ const UseStateExample = () => {
     const dec = () => {
         setCount(count - 1);
     }
+
+    const incAge= ()=>{
+        setInfo({...info, age : info.age +1})
+
+    }
+
+    console.log(info);
     return <div className="container text-center mt-4">
 
         <section> 
@@ -59,7 +66,7 @@ const UseStateExample = () => {
             <h2>{info.name}</h2>
             <h3>{info.email}</h3>
             <h4>{info.age}</h4>
-            <button className="btn btn-info">inc age</button>
+            <button onClick={incAge} className="btn btn-info">inc age</button>
             </section>
 
     </div>
